@@ -8,7 +8,7 @@
         1. train resnet18 for 20 epochs on the CIFAR10 dataset
         2. show loss curves for test and train datasets
         3. show a gallery of 10 misclassified images
-        4. show gradcam output on 10 misclassified images. Ensure gradcam is applied at least on chanel size of 5x5.
+        4. show gradcam output on 10 misclassified images. Ensure gradcam is applied at least on channel size of 5x5.
 2. Apply these transforms while training:
     1. RandomCrop(32, padding=4)
     2. CutOut(16x16)
@@ -41,16 +41,16 @@ This notebook uses a [master package](https://github.com/sayanbanerjee32/TASI_vi
 - Image augmentations
 - Model architecture
 - Train and test functions
-- other utility functions including but not limited to grad-cam, LR range test, plotting train and loss and accuracy curves, confusion matrix, plotting missclasified images.
+- other utility functions including but not limited to grad-cam, LR range test, plotting train and loss and accuracy curves, confusion matrix, plotting misclassified images.
     
 ### Model Architecture
 
-ResNet18 is used for for this model.
- - This has 4 Resnet blocks haveing 2 convolutions (followed by BatchNorm) each and RELU as activation at the end of each block.
+ResNet18 is used for this model.
+ - This has 4 Resnet blocks having 2 convolutions (followed by BatchNorm) each and RELU as activation at the end of each block.
  - Total params: 11,173,962
 
 ### Learning Rate Scheduler
-Training uses OneCycle Poliy for updating learning rate after each iteration.  
+Training uses OneCycle Policy for updating learning rate after each iteration.  
 
     - Number of Epochs: 20  
     - Batch size: 512  
@@ -88,7 +88,7 @@ There are total 912 wrong classifications out of 10,000 test images. Below is th
 Example of 10 misclassified images in descending order of loss.  
 ![image](https://github.com/sayanbanerjee32/TASI_ERAv2_S11/assets/11560595/7fbb134b-f77b-49c3-81a4-5402ca223225)
 
-Grad-cam images for the same 10 missclassified images below.  
+Grad-cam images for the same 10 misclassified images below.  
 ![image](https://github.com/sayanbanerjee32/TASI_ERAv2_S11/assets/11560595/80168962-8906-4a2f-bd83-d8711ae093a7)
 
 
